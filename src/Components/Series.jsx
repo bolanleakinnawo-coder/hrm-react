@@ -3,6 +3,11 @@ import homely1 from "../assets/homely/home1.jpg";
 import homely2 from "../assets/homely/home2.jpg";
 import homely3 from "../assets/homely/home3.jpg";
 import homely4 from "../assets/homely/home4.jpg";
+
+import pro1 from "../assets/PRO/1.jpeg";
+import pro2 from "../assets/PRO/2.jpeg";
+import pro3 from "../assets/PRO/3.jpeg";
+import pro4 from "../assets/PRO/4.jpeg";
 import { GrLinkNext } from "react-icons/gr";
 
 const Series = () => {
@@ -19,10 +24,10 @@ const Series = () => {
     {
       title: "The Pro Series",
       images: [
-        { src: homely1, desc: "Pro Background 1" },
-        { src: homely2, desc: "Pro Background 2" },
-        { src: homely3, desc: "Pro Background 3" },
-        { src: homely4, desc: "Pro Background 4" },
+        { src: pro1, desc: "Pro Background 1" },
+        { src: pro2, desc: "Pro Background 2" },
+        { src: pro3, desc: "Pro Background 3" },
+        { src: pro4, desc: "Pro Background 4" },
       ],
     },
   ];

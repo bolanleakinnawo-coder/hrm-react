@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from "react";
+import { Link } from "react-router-dom";
 
 import img1 from "../assets/gallery/1.jpeg";
 import img2 from "../assets/gallery/2.jpeg";
@@ -8,12 +9,12 @@ import img5 from "../assets/gallery/5.jpeg";
 import img6 from "../assets/gallery/6.jpeg";
 
 const photos = [
-  { src: img1, label: "Studio A" },
-  { src: img2, label: "Vanity Corner" },
-  { src: img3, label: "Cosy Lounge" },
-  { src: img4, label: "Bridal Setup" },
-  { src: img5, label: "Studio B" },
-  { src: img6, label: "Detail Shot" },
+  { src: img1, label: "" },
+  { src: img2, label: "" },
+  { src: img3, label: "" },
+  { src: img4, label: "" },
+  { src: img5, label: "" },
+  { src: img6, label: "" },
 ];
 
 const Portofolio = () => {
@@ -39,10 +40,8 @@ const Portofolio = () => {
   }, []);
 
   return (
-    <section className="gallery-section" id="gallery">
+    <section className="gallery-section" id="portfolio">
       <div className="gallery-top">
-       
-
         <h2 className="gallery-heading">Inside The Space</h2>
         <p className="gallery-sub">
           Every corner designed for your perfect shot
@@ -67,8 +66,8 @@ const Portofolio = () => {
       </div>
 
       <div className="gallery-bottom">
-        <button className="g-btn">
-          View full gallery <span className="g-arrow">→</span>
+        <button className="nav-btn-1 book-now-btn">
+          <Link to="/book">Book Now</Link>
         </button>
       </div>
     </section>

@@ -1,84 +1,57 @@
 import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
-import { Link } from "react-scroll";
+import { NavLink, Link } from "react-router-dom";
+
+import { Menu } from "lucide-react";
 
 const Navbar = () => {
   const [navOpen, setNavOpen] = useState(false);
-
   const closeMenu = () => setNavOpen(false);
 
   return (
     <div className="navbar">
       <NavLink to="/" className="logo" onClick={closeMenu}>
-        HRM <br />
-        <span className="logo-subtext">Asthetic Haven</span>
+        HRM
+        <span className="logo-subtext"> Aesthetic Haven</span>
       </NavLink>
 
-      <button
-        className="nav-toggle"
-        onClick={() => setNavOpen((current) => !current)}
-        aria-label="Toggle navigation"
-      >
-        <span />
-        <span />
-        <span />
-      </button>
-
       <div className={`nav-links ${navOpen ? "open" : ""}`}>
-        <button className="nav-close" onClick={closeMenu}>
-          Cancel
+        <button
+          className="nav-close"
+          onClick={closeMenu}
+          aria-label="Close menu"
+        >
+          ✕
         </button>
+
         <NavLink to="/" onClick={closeMenu}>
           Home
         </NavLink>
+        <a href="#series" onClick={closeMenu}>
+          The Series
+        </a>
 
-        <Link
-          to="series"
-          spy={true}
-          smooth={true}
-          duration={500}
-          activeClass="active"
-          onClick={closeMenu}
-        >
-          The series
-        </Link>
-
-        <Link
-          to="pricing"
-          spy={true}
-          smooth={true}
-          duration={500}
-          activeClass="active"
-          onClick={closeMenu}
-        >
+        <a href="#pricing" onClick={closeMenu}>
           Pricing
-        </Link>
+        </a>
 
-        <Link
-          to="portofolio"
-          spy={true}
-          smooth={true}
-          duration={500}
-          activeClass="active"
-          onClick={closeMenu}
-        >
-          Portofolio
-        </Link>
-
-        <Link
-          to="portofolio"
-          spy={true}
-          smooth={true}
-          duration={500}
-          activeClass="active"
-          onClick={closeMenu}
-        >
+        <a href="#portfolio" onClick={closeMenu}>
+          Portfolio
+        </a>
+        <Link to="/rules" onClick={closeMenu}>
           Rules
         </Link>
       </div>
 
-      <button className="nav-btn nav-btn-desktop">
-        <NavLink to="/">Book Now</NavLink>
+      {/* hamburger — mobile only */}
+      <Menu
+        className="nav-toggle"
+        onClick={() => setNavOpen((o) => !o)}
+        aria-label="Toggle navigation"
+      />
+
+      {/* Book Now — always visible, separate from nav-btn-desktop */}
+      <button className="nav-btn-1 book-now-btn">
+        <Link to="/book">Book Now</Link>
       </button>
     </div>
   );

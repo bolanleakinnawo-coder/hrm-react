@@ -1,0 +1,450 @@
+/* ── BOOK PAGE WRAPPER ──────────────────────────────────────── */
+/* Wrap your entire Book.jsx return in <div className="book-page"> */
+
+.book-page {
+  background: var(--cream);
+  min-height: 100vh;
+}
+
+/* ── SERIES SECTION ─────────────────────────────────────────── */
+
+.book-page .series-section {
+  background: var(--off-white);
+  padding: 60px 40px 48px;
+}
+
+.book-page .series-section > h2 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 44px;
+  font-weight: 400;
+  color: var(--black);
+  text-align: center;
+  margin-bottom: 6px;
+}
+
+.book-page .checking-note {
+  text-align: center;
+  font-size: 12px;
+  color: var(--gold-dark);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 28px;
+}
+
+.book-page .series-group {
+  margin-bottom: 52px;
+}
+
+.book-page .series-header {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.book-page .series-header h3 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 28px;
+  font-weight: 400;
+  color: var(--black);
+  letter-spacing: 0.04em;
+}
+
+.book-page .series-subtitle {
+  display: block;
+  font-size: 11px;
+  color: var(--gray);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin-top: 4px;
+}
+
+.book-page .series-images-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+}
+
+.book-page .series-card {
+  position: relative;
+  width: 260px;
+  border: 1px solid var(--gray-light);
+  overflow: hidden;
+  background: var(--white);
+  cursor: pointer;
+  transition:
+    border-color 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.book-page .series-card:hover {
+  border-color: var(--gold);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
+}
+
+.book-page .series-card.selected {
+  border: 2px solid var(--gold);
+  box-shadow: 0 8px 24px rgba(205, 150, 40, 0.18);
+}
+
+.book-page .series-card.unavailable {
+  opacity: 0.45;
+  cursor: not-allowed;
+  filter: grayscale(60%);
+}
+
+.book-page .series-card img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.book-page .series-card:not(.unavailable):hover img {
+  transform: scale(1.04);
+}
+
+.book-page .series-card-text {
+  background: var(--white);
+  color: var(--black);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 10px 12px;
+  text-align: center;
+  border-top: 1px solid var(--gray-light);
+}
+
+.book-page .unavailable-badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: rgba(255, 255, 255, 0.92);
+  color: var(--gray);
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border: 1px solid var(--gray-light);
+}
+
+.book-page .selected-badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: var(--gold);
+  color: var(--white);
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  font-weight: 600;
+  padding: 4px 10px;
+}
+
+/* ── CONTAINER ──────────────────────────────────────────────── */
+
+.book-page .container {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 0 24px 60px;
+  background: transparent;
+}
+
+/* ── PAYMENT BOX ────────────────────────────────────────────── */
+
+.book-page .account-box {
+  border: 1px solid rgba(205, 150, 40, 0.35);
+  padding: 28px 32px;
+  background: var(--white);
+  margin-bottom: 40px;
+  margin-top: 40px;
+}
+
+.book-page .account-box h3 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 22px;
+  font-weight: 400;
+  color: var(--black);
+  margin-bottom: 20px;
+}
+
+.book-page .account-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 11px 0;
+  border-bottom: 1px solid var(--off-white);
+  font-size: 14px;
+}
+
+.book-page .account-row:last-of-type {
+  border-bottom: none;
+}
+
+.book-page .account-row span {
+  color: var(--gray);
+}
+
+.book-page .account-row strong {
+  color: var(--black);
+  font-weight: 500;
+}
+
+.book-page .amount {
+  color: var(--gold) !important;
+  font-size: 22px !important;
+  font-family: "Cormorant Garamond", serif;
+}
+
+.book-page .screenshot-note {
+  font-size: 12px;
+  color: var(--gray);
+  line-height: 1.7;
+  margin-top: 16px;
+  border-left: 2px solid var(--gold-dark);
+  padding-left: 12px;
+}
+
+/* ── FORM ───────────────────────────────────────────────────── */
+
+.book-page .container h2 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 36px;
+  font-weight: 400;
+  color: var(--black);
+  margin-bottom: 28px;
+  padding-top: 40px;
+}
+
+.book-page .container input,
+.book-page .container select {
+  width: 100%;
+  background: var(--white);
+  border: 1px solid var(--gray-light);
+  border-radius: 0;
+  color: var(--black);
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  padding: 14px 16px;
+  margin-bottom: 14px;
+  transition: border-color 0.2s ease;
+  appearance: none;
+  -webkit-appearance: none;
+  outline: none;
+}
+
+.book-page .container input:focus,
+.book-page .container select:focus {
+  border-color: var(--gold);
+}
+
+.book-page .container input::placeholder {
+  color: var(--gray);
+}
+
+.book-page .container select {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23cd9628' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+  background-color: var(--white);
+  padding-right: 40px;
+  cursor: pointer;
+}
+
+.book-page .container select option {
+  background: var(--white);
+  color: var(--black);
+}
+
+.book-page .field-error {
+  font-size: 12px;
+  color: #c0392b;
+  margin: -8px 0 12px;
+}
+
+.book-page .field-hint {
+  font-size: 11px;
+  color: var(--gray);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin: -8px 0 16px;
+}
+
+.book-page .total {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 28px;
+  font-weight: 400;
+  color: var(--gold-dark);
+  margin: 16px 0 24px;
+}
+
+.book-page .container button {
+  width: 100%;
+  padding: 16px;
+  background: var(--black);
+  color: var(--white);
+  border: none;
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.book-page .container button:hover:not(:disabled) {
+  background: var(--gold-dark);
+}
+
+.book-page .container button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* ── CONFIRMATION SCREEN ────────────────────────────────────── */
+
+.book-page .confirm-screen {
+  text-align: center;
+  padding-top: 80px !important;
+}
+
+.book-page .confirm-icon {
+  font-size: 52px;
+  margin-bottom: 16px;
+}
+
+.book-page .confirm-screen h2 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 44px;
+  font-weight: 400;
+  color: var(--black);
+  margin-bottom: 12px;
+  padding-top: 0;
+}
+
+.book-page .confirm-sub {
+  font-size: 14px;
+  color: var(--gray);
+  line-height: 1.8;
+  max-width: 440px;
+  margin: 0 auto 32px;
+}
+
+.book-page .whatsapp-btn {
+  background: #25d366 !important;
+  color: var(--white) !important;
+  margin-top: 24px;
+}
+
+
+
+/* ── RESPONSIVE ─────────────────────────────────────────────── */
+
+@media (max-width: 600px) {
+  .book-page .series-section {
+    padding: 40px 16px 24px;
+  }
+
+  .book-page .series-section > h2 {
+    font-size: 32px;
+  }
+
+  .book-page .series-card {
+    width: calc(50% - 8px);
+  }
+
+  .book-page .series-card img {
+    height: 200px;
+  }
+
+  .book-page .container {
+    padding: 0 16px 48px;
+  }
+
+  .book-page .account-box {
+    padding: 20px 18px;
+  }
+}
+
+/* ── CONFIRMATION SCREEN ────────────────────────────────────── */
+
+.book-page .confirm-screen {
+  background: var(--off-white);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.book-page .confirm-card {
+  background: var(--white);
+  max-width: 420px;
+  width: 100%;
+  padding: 48px 40px;
+  text-align: center;
+  border: 1px solid var(--gray-light);
+}
+
+.book-page .confirm-check {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: rgba(205, 150, 40, 0.12);
+  color: var(--gold);
+  font-size: 32px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 28px;
+}
+
+.book-page .confirm-card h2 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 36px;
+  font-weight: 400;
+  color: var(--black);
+  line-height: 1.2;
+  margin-bottom: 16px;
+  padding-top: 0;
+}
+
+.book-page .confirm-sub {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+.book-page .screenshot-note {
+  font-size: 12px;
+  color: var(--gray);
+  line-height: 1.7;
+  margin-bottom: 32px;
+  border-left: 2px solid var(--gold-dark);
+  padding-left: 12px;
+  text-align: left;
+}
+
+.book-page .whatsapp-btn {
+  width: 100%;
+  padding: 16px;
+  background: var(--gold) !important;
+  color: var(--white) !important;
+  border: none;
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease !important;
+}
+
+.book-page .whatsapp-btn:hover {
+  background: var(--gold-dark) !important;
+  color: var(--white) !important;
+}

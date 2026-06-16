@@ -1,11 +1,15 @@
 import { FiInstagram, FiMail, FiPhone, FiMapPin } from "react-icons/fi";
-
+import { SiTiktok } from "react-icons/si";
+import { Link } from "react-router-dom";
 function Footer() {
   return (
     <footer className="footer">
       <div className="footer-container">
         <div className="footer-brand">
-          <h2>HRM Studio</h2>
+          <Link to="/" className="footer-logo">
+            HRM
+            <span className="logo-subtext"> Aesthetic Haven</span>
+          </Link>
 
           <p>
             A premium creative space designed for content creators, brands, and
@@ -29,27 +33,46 @@ function Footer() {
           <h3>Contact</h3>
 
           <p>
-            <FiPhone /> +234 000 000 0000
+            <FiPhone /> <a href="tel:09062327249">09062327249</a> /{" "}
+            <a href="tel:07015991635">07015991635</a>
           </p>
 
           <p>
-            <FiMail /> hello@hrmstudio.com
-          </p>
-
-          <p>
-            <FiMapPin /> Lagos, Nigeria
+            <FiMapPin /> Ilorin, Nigeria
           </p>
         </div>
 
         <div className="footer-social">
           <h3>Follow Us</h3>
 
-          <FiInstagram />
+          <p>
+            <FiInstagram />{" "}
+            <a
+              href="https://www.instagram.com/HRM_aesthetic_haven"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              HRM_aesthetic_haven
+            </a>
+          </p>
+
+          <p>
+            <SiTiktok />{" "}
+            <a
+              href="https://www.tiktok.com/@HRM_aesthetic_haven1"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              HRM_aesthetic_haven
+            </a>
+          </p>
         </div>
       </div>
 
       <div className="footer-bottom">
-        <p>© {new Date().getFullYear()} HRM Studio. All Rights Reserved.</p>
+        <p>
+          © {new Date().getFullYear()} HRM Aesthetic Haven. All Rights Reserved.
+        </p>
       </div>
     </footer>
   );

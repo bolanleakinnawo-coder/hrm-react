@@ -35,12 +35,12 @@ body {
   --shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
 }
 .hero {
-  min-height: calc(105vh - 80px);
+  min-height: calc(110vh - 80px);
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  padding: 40px 90px 40px;
+  padding: 0px 90px 40px;
   margin: 0;
   background-image:
     linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
@@ -62,6 +62,17 @@ body {
   text-align: left;
 }
 
+.about-section {
+  background: white;
+
+  padding: 50px;
+  text-align: left !important;
+}
+.footer-logo {
+  color: var(--gold) !important;
+  font-size: 20px !important;
+  font-weight: bold !important;
+}
 .navbar {
   background: var(--black-soft);
   position: sticky;
@@ -70,7 +81,7 @@ body {
   width: 100%;
   display: flex;
   justify-content: space-between;
-  padding: 20px 90px;
+  padding: 30px 90px;
   align-items: center;
   backdrop-filter: blur(20px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
@@ -81,7 +92,7 @@ body {
   border: none;
   background: transparent;
   cursor: pointer;
-  padding: 8px;
+  font-size: 16px;
   color: var(--white);
 }
 
@@ -101,14 +112,12 @@ body {
   border: none;
   background: transparent;
   color: var(--white);
-  font-size: 14px;
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
+  font-size: 22px;
   cursor: pointer;
-  padding: 10px 0;
+  padding: 4px;
   align-self: flex-end;
+  line-height: 1;
 }
-
 .logo {
   text-decoration: none;
   color: var(--gold);
@@ -143,7 +152,7 @@ body {
 }
 
 .nav-btn-desktop {
-  display: inline-flex;
+  display: flex;
 }
 
 .hero-content h1 {
@@ -159,7 +168,7 @@ body {
   padding: 8px 16px;
   color: var(--white);
   background: none;
-  border: 1px solid var(--gold-dark);
+  border: 1px solid var(--gold);
 }
 
 .nav-btn a {
@@ -169,8 +178,9 @@ body {
 .nav-btn-1 {
   padding: 8px 16px;
   color: var(--white);
-  background: var(--gold-dark);
+  background: var(--gold);
   border: none;
+  text-decoration: none;
 }
 
 .nav-btn-1 a {
@@ -222,7 +232,7 @@ button {
 .location-container {
   display: flex;
   align-items: center;
-  color: var(--gold-dark);
+  color: var(--gold);
   text-transform: uppercase;
   font-family: "Montserrat", sans-serif;
 }
@@ -1388,8 +1398,9 @@ button {
 
 .about-section {
   background: white;
-
-  padding: 50px 8%;
+  justify-content: center;
+  padding: 50px;
+  text-align: center;
 }
 
 .about-container {
@@ -1460,7 +1471,7 @@ button {
 
   border: none;
 
-  background: var(--gold-dark);
+  background: var(--gold);
 
   color: white;
 
@@ -1514,7 +1525,7 @@ button {
 
   font-size: 45px;
 
-  color: #c8a96b;
+  color: var(--gold);
 }
 
 .footer h3 {
@@ -1522,7 +1533,7 @@ button {
 
   margin-bottom: 20px;
 
-  color: #c8a96b;
+  color: var(--gold);
 
   font-family: "Montserrat", sans-serif;
 }
@@ -1559,9 +1570,9 @@ button {
 }
 
 .footer-social svg {
-  font-size: 30px;
+  font-size: 20px;
 
-  color: #c8a96b;
+  color: var(--gold);
 
   cursor: pointer;
 }
@@ -1576,12 +1587,20 @@ button {
   text-align: center;
 }
 
+a {
+  text-decoration: none;
+}
+
 @media (max-width: 900px) {
   .footer-container {
     grid-template-columns: 1fr;
   }
 }
 
+.book-now-btn a {
+  text-decoration: none;
+  color: var(--white);
+}
 @media (max-width: 900px) {
   .navbar {
     padding: 16px 20px;
@@ -1635,8 +1654,8 @@ button {
   }
 
   .hero-content h1 {
-    font-size: 40px;
-    line-height: 1.05;
+    font-size: 46px;
+    line-height: 1.02;
   }
 
   .hero-description {
@@ -1726,16 +1745,36 @@ button {
 
 @media (max-width: 600px) {
   .navbar {
-    padding: 14px 16px;
+    padding: 22px 16px;
   }
 
+  .logo {
+    text-decoration: none;
+    color: var(--gold);
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 4px;
+  }
+
+  .logo-subtext {
+    color: var(--white);
+    letter-spacing: normal;
+    font-weight: normal;
+    font-size: 14;
+  }
+
+  .series-card {
+    width: 320px !important;
+    margin-bottom: 15px;
+  }
   .hero {
-    padding: 110px 30px 110px;
+    padding: 50px 30px 70px;
   }
 
   .hero-content h1 {
     font-size: 35px;
     font-family: "Montserrat", sans-serif;
+    line-height: 1.2;
   }
 
   .hero-description {
