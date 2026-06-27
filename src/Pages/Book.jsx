@@ -6,6 +6,11 @@ import homely2 from "../assets/homely/home2.jpg";
 import homely3 from "../assets/homely/home3.jpg";
 import homely4 from "../assets/homely/home4.jpg";
 
+import pro1 from "../assets/PRO/1.jpeg";
+import pro2 from "../assets/PRO/2.jpeg";
+import pro3 from "../assets/PRO/3.jpeg";
+import pro4 from "../assets/PRO/4.jpeg";
+
 import { db } from "../../firebase";
 import { ref, push, get, child } from "firebase/database";
 
@@ -42,10 +47,10 @@ const SERIES = [
     subtitle: "Elevated studio experience",
     seriesKey: "pro",
     images: [
-      { id: "pro1", src: homely1, desc: "Pro Background 1" },
-      { id: "pro2", src: homely2, desc: "Pro Background 2" },
-      { id: "pro3", src: homely3, desc: "Pro Background 3" },
-      { id: "pro4", src: homely4, desc: "Pro Background 4" },
+      { id: "pro1", src: pro1, desc: "Pro Background 1" },
+      { id: "pro2", src: pro2, desc: "Pro Background 2" },
+      { id: "pro3", src: pro3, desc: "Pro Background 3" },
+      { id: "pro4", src: pro4, desc: "Pro Background 4" },
     ],
   },
 ];
@@ -233,7 +238,7 @@ TOTAL: ₦${bookingTotal.toLocaleString()}
 [Payment screenshot attached]`.trim();
 
     window.open(
-      `https://wa.me/2349169828254?text=${encodeURIComponent(message)}`,
+      `https://wa.me/2349062327249?text=${encodeURIComponent(message)}`,
       "_blank",
     );
   };
