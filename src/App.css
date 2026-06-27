@@ -35,7 +35,7 @@ body {
   --shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
 }
 .hero {
-  min-height: calc(110vh - 80px);
+  min-height: 100vh;
   width: 100%;
   display: flex;
   align-items: center;
