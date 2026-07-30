@@ -1,9 +1,9 @@
 import React, { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 
-import img1 from "../assets/gallery/1.jpeg";
-import img2 from "../assets/gallery/2.jpeg";
-import img3 from "../assets/gallery/3.jpeg";
+import img1 from "../assets/gallery/8.jpeg";
+import img2 from "../assets/gallery/7.jpeg";
+import img3 from "../assets/gallery/9.jpeg";
 import img4 from "../assets/gallery/33334.jpeg";
 import img5 from "../assets/gallery/5.jpeg";
 import img6 from "../assets/gallery/6.jpeg";
